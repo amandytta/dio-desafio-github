@@ -1,0 +1,45 @@
+O que é um sistema de controle de versão?
+Sempre que desenvolvedores criam um novo projeto eles continuam criando atualizações no código base. Mesmo depois de o projeto ser lançado é comum a atualização de versões, correção de bugs, adição de novas ferramentas, etc.
+
+O sistema de controle de versão ajuda a acompanhar as mudanças feitas no código base. E mais, ele também registra quem efetuou a mudança e permite a restauração do código removido ou modificado.
+
+O Que é GitHub?
+É um serviço baseado em nuvem que hospeda um sistema de controle de versão (VCS) chamado Git. Ele permite que os desenvolvedores colaborem e façam mudanças em projetos compartilhados enquanto mantêm um registro detalhado do seu progresso.
+
+Como Começar a Usar o GitHub:
+1. Crie um Repositório no GitHub
+Repositório, ou repo, é um diretório onde os arquivos do seu projeto ficam armazenados. Ele pode ficar em um depósito do GitHub ou em seu computador. Você pode armazenar códigos, imagens, áudios, ou qualquer outra coisa relacionada ao projeto no diretório.
+
+Para começar o processo, siga esses passos:
+
+- Clique em Create a repository (criar um repositório) para começar um novo projeto;
+- Crie um Nome de repositório. Confira se ele está definido para Public (público) para que ele tenha código aberto, e então marque a caixa Add a README file (adicionar um arquivo LEIA-ME). Finalmente, clique em Criar repositório.
+
+2. Crie Branches no GitHub
+Ao criar branches, ou ramificações, você gera versões diferentes de um repositório. Quando você modifica o projeto nas branches de recursos, um desenvolvedor pode ver como isso vai afetar o projeto principal na hora que tudo for integrado.
+
+Confira abaixo como criar um branch de recursos:
+
+- Vá para o seu novo repositório. Clique no botão main (principal) e insira o nome do seu nome branch de recurso. Clique em Create branch (criar branch).
+
+Agora você criou um novo branch de recurso que é idêntico ao branch mestre. Você pode começar a fazer mudanças livremente sem afetar o projeto principal.
+
+3. Entenda Como Funcionam Commits no GitHub
+Os Commits é como as mudanças salvas no GitHub são chamadas. Cada vez que você muda o arquivo do branch de recurso, você terá que executar um Commit para mantê-lo.
+
+Aqui está como promover uma mudança e executar o Commit:
+
+- Acesse o branch de recurso ao clicar em main e selecionar no menu suspenso a sua ramificação recém-criada;
+- Clique no “ícone de lápis” e comece a editar o arquivo. Assim que tiver terminado, escreva uma descrição curta sobre quais mudanças foram feitas. Clique em Commit Changes (confirmar alterações).
+
+4. Crie Pull Requests no GitHub
+Para propor as mudanças que você acabou de fazer para outros desenvolvedores trabalhando no mesmo projeto, você deve criar um pull request. São eles que fazem ser tão fácil de trabalhar junto em projetos, já que eles são a principal ferramenta de colaboração no GitHub.
+
+Pull Requests permitem que você veja as diferenças entre o projeto original e o seu branch de recurso. É assim que você pede para os seus pares revisá-las. Se os outros desenvolvedores aprovarem as modificações, eles podem executar um merge pull request (solicitação de mesclagem). Isso irá aplicar as mudanças para o projeto principal.
+
+Para fazer um pull request, siga os passos abaixo:
+
+- Clique em Pull requests -> New pull request (Solicitação de mesclagem -> Nova solicitação de mesclagem). Na seção Example comparisons (comparações de exemplo), selecione o branch de recursos no qual você esta trabalhando há pouco;
+- Confira mais uma vez as mudanças e clique em Create pull request. Na nova página, escreva o título e ofereça uma curta descrição do trabalho que você acabou de executar — para encorajar que ele seja adicionado ao branch mestre. Clique em Create pull request.
+
+Agora, os outros desenvolvedores poderão mesclar as mudanças que você fez com os arquivos originais do projeto.
