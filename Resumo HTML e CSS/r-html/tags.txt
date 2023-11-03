@@ -1,0 +1,30 @@
+Principais tags do HTML:
+Atualmente existem mais de 140 tags, mas algumas delas quase não são utilizadas. Dentre as mais utilizadas temos:
+
+<head> – local para declarar todas informações, como título e metadados da sua página;
+
+<title> – define o título;
+
+<body> – local para declarar todos os elementos que irão compor o corpo da página;
+
+<header> – define um cabeçalho;
+
+<section> – define uma seção;
+
+<article> – define um artigo;
+
+<div> – define uma divisão;
+
+<footer> – define um rodapé;
+
+<nav> – define uma área de navegação (como menus);
+
+<table> – define uma tabela;
+
+<form> – define um formulário;
+
+<input> – define os campos do formulário;
+
+<textarea> – define uma área para o usuário digitar um texto;
+
+<button> – define um botão;

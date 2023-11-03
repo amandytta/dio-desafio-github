@@ -1,0 +1,130 @@
+
+- A tags HTML de conteúdo
+Agora que você já conhece as principais tags estruturais, pode organizar o seu conteúdo de forma adequada. Assim sendo, vamos listar as principais tags para incluir conteúdo à página, como títulos, parágrafos, imagens, links, etc.
+
+- Tags HTML de título
+Possuem valor semântico, variando entre seis níveis hierárquicos. Para fins de otimização SEO é importante entender como funcionam, e fazer uma utilização adequada. Para definir títulos, utilizamos as tags:
+
+<h1></h1> - Título de maior valor hierárquico
+<h2></h2>
+<h3></h3>
+<h4></h4>
+<h5></h5>
+<h6></h6> - Título de menor valor hierárquico
+
+Conforme dito anteriormente, a distribuição de título interferem no otimização do SEO de uma página.  Com isso, uma página contendo apenas h1 não seria bem vista pelos mecanismos de busca. Portanto, é importante dividir os títulos deixando o h1 apenas para o título principal, h2 ou h3 para títulos das seções e h4 a h6 para subtítulos ou títulos que possuam baixo valor hierárquico em relação aos demais.
+
+- Tags HTML de texto
+Definem textos, estilos de fonte, parágrafos, spans, quebras de linhas, etc. Vamos conhecê-las:
+
+<p></p> – Principal tag de texto, compõe um parágrafo;
+
+<span></span> – Apesar de ter uma funcionalidade e características parecidas com os parágrafos, costumam ser utilizadas apenas para pequenas informações, como legendas de um formulário, legendas de uma imagem, etc. Também pode ser utilizada para formar um container;
+
+<pre></pre> – Tag utilizada para representar texto pré-formatado. Muito utilizada para inserir códigos;
+
+<blockquote></blockquote> - Para inserir um parágrafo de citação ou observação;
+
+<u></u> - Para deixar o texto sublinhado; 
+
+<strong></strong> - Transforma o texto em negrito;
+
+<mark></mark> - Para marcar o texto usando um "marca texto" colorido;
+
+<sup></sup> - Para criar uma palavra/frase elevada a uma letra, número ou símbolo (exemplo: css³ ou negrito* ou c°);
+
+<b></b> – Transforma o conteúdo em negrito;
+
+<i></i> – Transforma o conteúdo em itálico;
+
+<br/> – Essa tag não necessita de fechamento, ela executa a função de quebra de linha.
+
+<hr/> – Essa tag não necessita de fechamento, ela forma uma linha horizontal.
+
+- Tag de link HTML
+É responsável que faz a ligação entre um documento e outro, sendo ele da mesma página ou de uma página de outro domínio. Esse elemento garantiu que o HTML se destacasse, e moldou a internet da forma que ela é hoje! Portanto, é o principal fundamento que forma a web.
+
+Para realizar um link, podemos chamar as tags <a></a> com o atributo href. Por exemplo, caso você queira criar um link no seu texto que redirecione à página inicial do google:
+
+<a href="https://www.google.com">Google</a>
+
+- Tags HTML de multimídia
+Servem para incluir imagens, vídeos, áudios, iframes e outros tipos de conteúdo multimídia.
+
+<img />
+Essa tag não necessita de fechamento, serve para incluir uma imagem ao seu texto. A partir dessa tag, utilizamos o atributo src=”” onde deve ser digitado o local em que a imagem se encontra. Também é muito utilizado em conjunto com o atributo alt para definir o texto alternativo da imagem.
+
+Por exemplo:
+
+<img src="imagens/imagem1.jpg" alt="imagem 1 da minha página"/>
+
+<video> e <audio>
+Essa tag serve para indicar a inserção de um vídeo. Com isso, devemos colocar alguns atributos dentro da tag para poder ativar o controle, a principal dela é o controls. Posteriormente, incluímos a tag <source> com os atributos src e type, onde receberão o local em que está o vídeo e o tipo do vídeo. É recomendado utilizar mais de um tipo de source do mesmo vídeo, para garantir maior possibilidade de compatibilidade com o navegador. Finalmente, podemos incluir uma mensagem que será renderizada apenas se o navegador do usuário não suportar a tag video.
+
+Diante disso, vejamos os exemplos a seguir:
+
+<video controls>
+  <source src="video.mp4" type="video/mp4">
+  <source src="video.ogg" type="video/ogg">
+  Seu navegador não possui suporte para Vídeos.
+</video>
+
+A tag <audio> funciona da mesma forma que a tag <video>, portanto, utilizamos a tag <source> dentro dela. Vejamos o exemplo a seguir:
+
+<audio controls>
+  <source src="musica.ogg" type="audio/ogg">
+  <source src="musica.mp3" type="audio/mpeg">
+  Seu navegador não possui suporte para áudio.
+</audio>
+
+<iframe>
+Os iframes são muito utilizados na atualidade, servem para incluir recursos de uma outra página nesta página. Vale a pena conferir o exemplo da W3C Schools, pagina de tutorias pertencente ao grupo W3C, a organização atualmente responsável pelos padrões da web.
+
+Portanto, para inserir um iframe, basta utilizar a tag com o atributo src. Além disso, é possível incluir um texto dentro do elemento, caso o navegador do usuário não possua suporte para tal. Vejamos então o exemplo abaixo:
+
+<iframe src="https://www.homehost.com.br">
+  <p>Seu navegador não possui suporte para iFrames.</p>
+</iframe>
+
+- Tags HTML de listas
+Para poder criar uma lista, podemos utilizar uma lista ordenada, a partir das tags <ol></ol>, ou uma lista não ordenada, a partir das tags <ul></ul>. Posteriormente, incluímos dentro da lista os elementos da mesma, dentro das tags <li></li>.
+
+Vejamos os exemplos a seguir:
+
+<p>Minha lista ordenada:</p>
+<ol>
+  <li>item 1</li>
+  <li>item 2</li>
+  <li>item 3</li>
+</ol>
+
+<p>Minha lista não ordenada:</p>
+<ul>
+  <li>item 1</li>
+  <li>item 2</li>
+  <li>item 3</li>
+</ul>
+
+- Tags HTML de formulário
+As tags de formulário são muito utilizadas para obter informações do usuário, realizar cadastros, receber opiniões, entre outros. São importantíssimas para qualquer ramo do mercado.
+
+Para iniciar um formulário, incluimos as tags <form> e </form>. Posteriormente, devemos incluir o conteúdo do formulário. Digamos que, por exemplo, você queira incluir três campos, sendo dois para coletar informações e um para receber uma mensagem. Desta forma, para criar os campos de preenchimento, deverá utilizar a tag <input>, enquanto para o campo referente à mensagem, deverá utilizar a tag <textarea>.
+
+- A tag <input>
+A tag <input> possui o atributo type, que varia entre diversos tipos (vamos explicar os principais deles abaixo). Também há o atributo placeholder, que é um texto que ficará disponível enquanto nada for digitado nesse campo. Também é importante definir um atributo name para cada input.
+
+<input type=”text”> – Define um campo que receberá qualquer caractere;
+
+<input type=”email”> – Define um campo que receberá caracteres e verificará se o mesmo consiste em um e-mail válido;
+
+<input type=”submit” value=”ENVIAR”> – Define um botão que servirá para o envio do formulário. Dentro dele, podemos atribuir o value, que será o texto dentro do botão de envio.
+
+Existem outros tipos de <inputs> que podem ser estudados na documentação disponível pela W3C.
+
+- As tags <textarea></textarea>
+Assim como a tag <input>, essa tag define um campo para o formulário. Porém, diferentemente, ela tem como principal característica ser uma área de preenchimento de texto, ou seja, permite que o usuário escreva um texto ou uma mensagem no seu interior. Também traz opções para que o usuário redimensione seu tamanho (resize). Dessa forma, podemos incluir uma area de texto utilizando as tags <textarea> e </textarea>.
+
+- Tags de estilos e scripts
+A tag <style> e </style> deve ser incluída no <head> do seu código HTML. Dentro dessa tag, é possível incluir todo o seu código CSS, ou seja, seu código de estilos.
+
+Já a tag <script> e </script> tem como objetivo incluir códigos de scripts ao seu HTML, podendo ser incluída em qualquer parte. Contudo, recomenda-se fortemente que seja inserida após o <footer>. Dessa forma, podemos incluir nela um código javascript.
