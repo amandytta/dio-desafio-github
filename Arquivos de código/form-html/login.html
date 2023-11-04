@@ -1,0 +1,25 @@
+<!- Estrutura Básica de um html5, e um formulário html de login->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de Cadastro</title>
+  </head>
+  <body>
+    <form
+      name="signup"
+      onsubmit="alert('Enviei o formulário');"
+      target="_self"
+      autocomplete="off"
+      method="post"
+      action="#"
+    >
+      Nome: <input type="text" name="name" /><br />
+      Idade: <input type="number" name="age" min="14" max="65" /><br />
+      Senha: <input type="password" name="password" /><br />
+      <button type="submit">Enviar</button>
+    </form>
+  </body>
+</html>

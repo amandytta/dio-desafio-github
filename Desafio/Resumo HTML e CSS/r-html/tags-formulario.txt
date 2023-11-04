@@ -1,0 +1,410 @@
+- O que é um formulário HTML?
+O formulário HTML é um formulário de preenchimento de dados ou que resulta em uma ação desejada utilizando a linguagem de marcação HTML. É formado por um ou mais widgets. Esses widgets são campos de textos, caixas de seleção, botões, radio buttons e checkboxes utilizando ferramentas do próprio HTML. Dessa forma, o usuário pode interagir com a página ao executar ações através desses formulários.
+
+Esse recurso é muito utilizado para a criação de formulários de contato, formulários para captura de leads, e também para criação de sistemas, como por exemplo a criação de um modal de login.
+
+- Como inserir um formulário HTML:
+O formulário HTML é representado pela tag de abertura <form> e a de fechamento </form>. Dentro dessas tags, serão colocados todos os elementos que compõem este formulário.
+
+Para a tag <form> podem ser atribuídos o atributo method e o atributo action.
+
+O atributo action define o local (através de uma URL) ao qual serão enviados todos os dados recolhidos do formulário.
+
+O atributo method define o método HTTP com que o formulário HTML irá lidar com os dados recebidos. São eles: o método GET e o método POST. Posteriormente vamos entender melhor como funcionam esses dois métodos.
+
+Dessa forma, vejam exemplos abaixo do uso da tag <form> :
+
+<!--Formulário HTML através do método POST-->
+<form method="post" action="/receber_dados.php">
+    ...
+</form>
+
+<!--Formulário HTML através do método GET -->
+<form method="get" action="/receber_dados.php"> 
+    ... 
+</form>
+
+- Os métodos GET e POST:
+Para entender a diferença entre esses dois métodos, é necessário compreender como funcionam as requisições HTTP. De uma forma resumida, sempre que você acessa um recurso através da web, o navegador envia uma requisição através da URL. Portanto o HTTP é uma requisição que consiste em duas partes, o cabeçalho e o corpo. O cabeçalho contém um conjunto de metadados globais envolvendo os recursos do navegador. Já o corpo pode conter informações necessárias para o servidor conseguir processar a solicitação anterior.
+
+- O método GET
+É usado pelo navegador para solicitar que o servidor envie de volta um determinado recurso. Portanto, é como se falássemos ao servidor “Servidor, eu quero obter este recurso.”.  Nesse caso, o navegador envia um corpo vazio. Portanto, já que o corpo fica vazio, se um formulário for enviado através do método GET, os dados serão reconhecidos pelo servidor através da URL.
+
+Dessa forma, podemos perceber que ao enviar um formulário com os campos Nome e Idade, a URL iria se parecer com algo como: url?nome=valor&idade=value.
+
+Esse é o método padrão do formulário HTML. Caso não seja declarado o atributo method, o formulário funcionará através do método GET.
+
+Vejamos então, algumas observações a respeito do método GET:
+
+> O tamanho de uma URL é limitado a cerca de 3000 caracteres;
+
+> Nunca use o GET para enviar dados confidenciais, pois esses dados ficarão visíveis na URL;
+
+> É útil para envios de formulários em que um usuário deseja marcar o resultado;
+
+> GET é melhor para dados não seguros, como strings de consulta no Google.
+
+- O método POST
+É utilizado no navegador para conversar com o servidor. Os dados são enviados ao servidor através do corpo da solicitação HTTP. Também é realizada uma solicitação de resposta. Portanto, é como se falássemos ao servidor “Servidor, verifique esses dados e me retorne um resultado adequado”. Dessa forma, ao enviar um formulário através do método POST, os dados serão anexados ao corpo da solicitação HTTP.
+
+Diferentemente do método GET, explicado anteriormente, o método POST não inclui o corpo na URL. Portanto, os dados enviados não ficarão visíveis na URL.
+
+Vejamos então, algumas observações a respeito do método POST:
+
+> Anexa dados de formulário dentro do corpo da solicitação de HTTP. Portanto, os dados não são mostrados na URL;
+
+> Não tem limitações de tamanho;
+
+> Os envios de formulários com o POST não podem ser marcados.
+
+- Elementos de formulário HTML
+Os formulários HTML são compostos por diversos elementos, que compõem o formulário. Dessa forma, é necessário entender como e quando utilizar cada um deles. Os elementos de formulários utilizados no HTML são:
+
+<input> – Define um campo de entrada de dados;
+
+<textarea> – Define uma área de texto, podendo conter diversas linhas de texto;
+
+<button> – Define um botão;
+
+<select> – Define uma lista selecionável, também conhecida como drop-down;
+
+<option> – Define uma lista de opções dentro de um drop-down;
+
+<optgroup> – Define um grupo de opções;
+
+<fieldset> – Define um grupo de campos;
+
+<label> – Define um rótulo ou legenda para um campo ou controle do formulário;
+
+<output> – Define elementos de saída para o formulário;
+
+<legend> – Define um título para o conjunto de campos.
+
+Além dessas tags de elementos de formulário HTML, nada impede de utilizar outras tags dentro da tag <form>. Por exemplo: podemos utilizar dentro do <form> as tags <div></div>, <p></p>, entre outras.
+
+- A tag <input>
+A tag <input> é uma das mais utilizadas dentro de um formulário HTML e considerada a principal. Esta tag representa os campos de entrada de dados de um formulário. Existem diversos tipos, principalmente após a atualização do HTML para a versão HTML5, que trouxe diversos tipos novos de <input>.
+
+O atributo mais importante da tag <input> é o atributos type. Esse atributo representa o tipo de campo de entrada ao qual essa tag pertence e como ele se comporta. Portanto, declarar o atributo type é um pré-requisito para utilizar a tag <input>.
+
+Outro atributo importante para a tag <input> é o atributo name, que define um nome para o campo de entrada. Este recurso é muito útil para conseguir identificar os campos através dos métodos GET e POST.
+
+Há também outro atributo que é muito utilizado, o atributo value. Esse atributo define um valor inicial para o campo de entrada.
+
+Outro atributo que também merece destaque é o placeholder, pois esse atributo permite digitarmos uma “descrição” que será visualizada enquanto o campo de entrada não possuir nenhum valor.
+
+Há ainda um atributo bastante utilizado, que garante que aquele campo tenha seu preenchimento obrigatório para validar e permitir o envio do formulário: o atributo required. Portanto, sempre que precisar manter o preenchimento de um campo obrigatório, basta utilizar este atributo.
+
+Dessa forma, vejamos um exemplo de formulário abaixo:
+
+<form method="get" action="envio_dados.php">
+    <input type="text" name="nome" placeholder="digite seu Nome aqui">
+    <input type="e-mail" name="email" placeholder="Digite seu e-mail">
+    <input type="submit" name="enviar" value="Enviar">    
+</form>
+
+- Os tipos de campos <input>
+Conforme vimos anteriormente, o principal atributo da tag <input> é o atributo type. Esse atributo é capaz de definir o comportamento do campo de entrada. Ao todo, existem 22 valores para esse atributo, ou seja, 22 tipos de atributo type.
+
+Também é importante saber que boa parte desses tipos são recursos novos do HTML5. Portanto, nem todos esses tipos são bem reconhecidos por todos navegadores, especialmente para dispositivos móveis. São esses os novos tipos do HTML5: color, date, datetime–local, month, week, time, email, number, range, search, tel, e url.
+
+Portanto, vejamos abaixo os possíveis valores do atributo type da tag <input>:
+
+
+Type	                   Descrição                     HTML5?
+button	              Define um botão	                   –
+checkbox	Define uma caixa de checagem	           –
+color	        Define uma caixa de cores	           –
+date	        Define um campo de data	                   ☑
+datetime-local	Define um campo de data e horário	   ☑
+email	        Define um campo de e-mail	           ☑
+file	        Define uma campo para upload de arquivos   –
+hidden	        Define um campo oculto	                   –
+image           Define uma imagem como botão de envio	   –
+month	        Define um controle de mês e ano	           ☑
+number	        Define um campo de intervalo de número 	   ☑
+password	Define um campo de senha (mascarando-a)	   –
+radio	        Define um campo de opção (radio)	   –
+range	        Define um controle de intervalo	           ☑
+reset	        Botão para reiniciar aos valores iniciais  –
+search		Define um campo de pesquisa		   ☑
+submit		Define um botão de envio 	           –
+tel		Define um campo de telefone	           ☑
+text		Define um campo de texto		   –
+time		Define um campo de controle de horário	   ☑
+url		Define um campo de URL	 		   ☑
+week		Define um campo de controle de semana	   ☑
+
+
+<input type=”button”>
+Esse tipo de campo define um botão clicável no formulário HTML. É muito utilizado em conjunto ao JavaScript para a ativação de um scrip. Portanto, também é muito utilizado com o atributo onclick, pra realizar um script ao ser clicado.
+
+Vejamos o exemplo abaixo, onde incluiremos a função msg() no JavaScript e a mesma será executada ao clicar no botão:
+
+<form>
+  <input type="button" value="Clique Aqui" onclick="msg()">
+</form>
+
+<script>
+function msg() {
+  alert("Você clicou no botão!");
+}
+</script>
+
+Com esse exemplo, o navegador irá renderizar um botão "clique aqui"
+
+Posteriormente, ao clicar no botão, será renderizada a função msg(), que executará um alerta com a frase "Você clicou no botão!"
+
+<input type=”checkbox”>
+O input  do tipo checkbox define uma caixa de seleção. A caixa de seleção é mostrada como uma caixa quadrada que pode ser marcada quando é ativada. As caixas de seleção permitem que o usuário possa marcar uma ou mais opções. Você também pode ler posteriormente o nosso artigo sobre o checkbox, onde apresentamos diversas maneiras de trabalhar com as caixas de seleção no formulário HTML.
+
+Portanto, vejamos um exemplo de como utilizar o input do tipo checkbox:
+
+<form>
+    <input type="checkbox" name="veiculo1" value="bicicleta">Eu tenho uma bicicleta<br>
+    <input type="checkbox" name="veiculo2" value="carro">Eu tenho um carro<br>
+    <input type="checkbox" name="veiculo3" value="moto">Eu tenho uma moto
+</form>
+
+Dessa forma, o exemplo acima será renderizado pelo navegador como no exemplo abaixo:
+□ Eu tenho uma bicicleta
+□ Eu tenho um carro
+□ Eu tenho uma moto
+
+<input type=”color”>
+Este tipo de campo foi lançado no HTML5. Define uma caixa de cores, permitindo a seleção de uma cor. Você pode utilizar um código hexadecimal de cor para poder escolher um cor selecionada inicialmente. Ao ser clicado, esse tipo de campo abre uma caixa de seleção de cores. Portanto, vejamos o exemplo abaixo, onde deixaremos o valor #0000FF (azul) como valor de cor inicial:
+
+<form>
+    Selecione sua cor preferida: <input type="color" name="favcor" value="#0000FF"
+</form>
+
+<input type=”date”>
+Outro tipo que foi lançado no HTML5 é o “date”. O campo do tipo “date” define um selecionador de data. Portanto, o valor resultante inclui o ano, o mês e o dia. Contudo, esse tipo de campo não é aceito por todos os navegadores, como por exemplo no Safari.
+
+Vejamos então o exemplo abaixo de um input do tipo date em um formulário HTML:
+
+<form>
+    Data de nascimento: <input type="date" name="nascimento">
+</form>
+Com o exemplo acima, o resultado será: 
+
+Data de nascimento: dd/mm/aaaa
+
+Neste exemplo, ao clicar no campo do tipo data, aparecerá um campo de seleção de data.
+
+<input type=”datetime-local”>
+Também é um tipo de campo lançado com o HTML5. Assim como no input do tipo date, o tipo datetime-local define uma data, porém com o acréscimo de definir também um horário. Também é um recurso não muito bem aceito por todos navegadores.
+
+Portanto, vejamos abaixo um exemplo de um formulário HTML contendo um campo com datetime-local:
+
+<form>
+    Data de nascimento: <input type="datetime-local" name="bdaytime">
+</form>
+
+<input type=”email”>
+Também é um tipo de campo que foi lançado no HTML5. Este tipo de campo define um e-mail. Ele é muito útil porque já faz a validação adequada para os campos de e-mail. Portanto, caso seja digitado um valor que não seja um endereço de e-mail válido, o formulário irá recusar e informar que o mesmo não é um e-mail válido.
+
+A maioria dos navegadores atuais já aceitam o input do tipo email. Porém ainda há alguns navegadores, especialmente de dispositivos móveis, que encontram dificuldades em realizar a validação.
+
+Vejamos então o exemplo de formulário HTML abaixo, utilizando um input do tipo email:
+
+<form>
+    E-mail: <input type="email" name="e-mail" placeholder="digite seu e-mail aqui">
+</form>
+
+<input type=”file”>
+O input do tipo “file” define um campo de seleção de arquivos e um botão para upload de arquivos. Caso deseje permitir a seleção de vários artigos, pode adicionar o atributo “multiple”. Portanto, vejamos os exemplos abaixo:
+
+<form>
+    <input type="file" name="arquivos">
+</form>
+<br><br><br>
+
+<!-- Para permitir seleção de multiplos arquivos: -->
+<form>
+    <input type="file" name="arquivos" multiple>
+</form>
+
+<input type=”hidden”>
+O input do tipo “hidden” define um campo de entrada oculto. Dessa forma, através do campo oculto, é possível inserir valores que não serão renderizados, mas serão enviados como dados ao enviar o formulário.
+
+Este recurso é muito utilizado para armazenar o registro do banco de dados que precisa ser atualizado quando o formulário é enviado.
+
+Observe que, apesar deste recurso não ficar visível no navegador, é facilmente visualizado e também editável através do código fonte ou de ferramentas do desenvolvedor, disponível em qualquer navegador. Portanto, este recurso não deve ser utilizado como forma de segurança.
+
+Vejamos então o exemplo abaixo:
+
+ <input type="hidden" id="inputOculto" name="inputOculto" value="meuvalor">
+
+<input type=”image”>
+O input do tipo “image” define uma imagem como botão de envio do formulário HTML. Portanto, é como se funciona-se como um input do tipo “submit”. Assim como na tag <img>, o caminho para a imagem é especificado no atributo src.
+
+Você pode verificar o exemplo da w3c School sobre o <input type=”image”>:
+
+<form action="/action_page.php">
+  First name: <input type="text" name="fname"><br>
+  Last name: <input type="text" name="lname"><br>
+  <input type="image" src="img_submit.gif" alt="Submit" width="48" height="48">
+</form>
+
+<input type=”month”>
+Este tipo de input também foi lançado com o HTML5. O input do tipo “month” define um mês e ano. Portanto, vejamos o exemplo abaixo:
+
+<form>
+    Mês e ano: <input type="month" name="mesano">
+</form>
+
+<input type=”number”>
+Este tipo de campo também foi lançado com o HTML5 .O input do tipo “number” define um campo para inserir um número. Este recurso é muito util, pois permite também incluir restrições, ou seja, valores mínimos e/ou máximos. Portanto, você pode utilizar os atributos abaixo para especificar as restrições:
+
+max – especifica o valor máximo permitido;
+
+min – especifica o valor mínimo permitido;
+
+step – especifica os intervalos numéricos legais.
+
+Dessa forma, vejamos então o exemplo abaixo para criar um formulário HTML com o input do tipo number:
+
+<form>
+    Quantidade (entre 1 e 5): <input type="number" name="quantidade" min="1" max="5">    
+</form>
+
+<input type=”password”>
+O input do tipo “password” define um campo para digitação de senha. Portanto, os caracteres são mascarados.
+
+Observe que qualquer formulário que envolva informação confidencial, como senha, deve ser veiculado por HTTPS. Dessa forma, a página manterá um nível de segurança adequado.
+
+Vejamos o exemplo abaixo de um campo de senha para o formulário HTML:
+
+<form>
+    <input type="password" name="senha" placeholder="Digite sua Senha">
+</form>
+
+Portanto, com o exemplo acima, inicialmente o resultado será uma caixa onde você digita sua senha.
+Posteriormente, ao digitar qualquer coisa no campo de senha, o conteúdo ficará mascarado com "bolinhas"
+
+<input type=”radio”>
+O input do tipo “radio” define um botão de opção. Muito utilizados em formas de grupos, ou seja, um conjunto de opções relacionadas. Dessa forma, o usuário poderá selecionar apenas um botão do tipo radio pertencente a um mesmo grupo.
+
+Para manter um grupo, o nome dos radios devem ser o mesmo, portanto, receberá o mesmo valor no atributo name. Dessa forma, ao selecionar qualquer botão do tipo radio, qualquer outro botão radio do mesmo grupo será desmarcado automaticamente.
+
+Para definir um valor exclusivo para cada botão radio pertencente a um mesmo grupo, basta utilizar o atributo value. Esse valor não será mostrado para o usuário, mas será enviado para o servidor. Portanto, ao enviar um formulário que contenha um grupo de radio, o valor desse grupo será o valor do atributo value do radio selecionado.
+
+Vejamos o exemplo abaixo:
+
+<form>
+    <p>Qual sua idade?</p>
+    <input type="radio" name="idade" value="18_22">18 a 22 <br>
+    <input type="radio" name="idade" value="23_30">23 a 30 <br>
+    <input type="radio" name="idade" value="mais31">acima de 31<br>
+</form>
+
+Dessa forma, o resultado do exemplo acima será:
+
+Qual sua idade?
+○ 18 a 22
+○ 23 a 30
+○ acima de 31
+
+<input type=”range”>
+Este tipo de campo foi lançado com o HTML5. O input do tipo “range” define um controle equivalente a um controle deslizante. O intervalo padrão é de 0 a 100. Porém, através dos atributos, é possível alterar esse intervalo. Portanto os atributos abaixo são muito utilizados nesse tipo de input:
+
+max – especifica o valor máximo permitido;
+min – especifica o valor mínimo permitido;
+step – especifica os intervalos numéricos.
+Dessa forma, vejamos abaixo um exemplo de formulário HTML com o input do tipo range:
+
+<form>
+    Defina seu nível de satisfação:<br>
+    pouco satisfeito
+    <input type="range" name="satisfacao" min="0" max="10">
+    muito satisfeito
+</form>
+Assim, o resultado do código de exemplo será:
+
+Defina sua satisfação: 
+pouco satisfeito -----------●-- muito satisfeito
+
+<input type=”reset”>
+O input do tipo “reset” define um botão para reiniciar os valores digitados pelo usuário no formulário para seus valores iniciais. Portanto, esse botão é muito útil. Porém, ao mesmo tempo, é recomendo evitar o seu uso de forma descuidada. Isso é recomendado, pois é muito incômodo ao usuário ter seu formulário reiniciado por clicar em um botão por engano.
+
+Vejamos então o exemplo abaixo:
+
+<form>
+    <input type="reset">
+</form>
+
+<input type=”search”>
+Este tipo de input também foi lançado com o HTML5. O input do tipo “search” define um campo de pesquisa. Dessa forma, ao digitar um texto, o mesmo irá receber uma string de pesquisa.
+
+É importante definir um nome para este campo de pesquisa. Sem isso, nada será enviado. Segundo o W3C, o nome mais comum para campos de pesquisa é “q”. Portanto, vejamos o exemplo abaixo:
+
+<form>
+    Pesquisar: <input type="search" name="q">
+</form>
+
+Dessa forma, o resultado do exemplo acima será uma caixa de pesquisa.
+
+<input type=”submit”>
+Um dos tipos de campos mais importantes do formulário HTML, o input do tipo “submit” define um botão de envio. Portanto, ao clicar no submit, todos os valores do formulário serão enviados para o servidor através do método escolhido na tag <form>, e executando a ação definida no atributo action do <form>.  É comum utilizar o atributo value para definir uma palavra ou frase que será renderizada dentro desse botão.
+
+Portanto, vejamos o exemplo abaixo:
+
+<form>
+    <input type="submit" value="Enviar Formulário">
+</form>
+Dessa forma, o resultado do exemplo acima será um botão "enviar formulário".
+
+<input type=”tel”>
+Esse tipo de campo foi lançado junto ao HTML5. O input do tipo “tel” define um campo para inserir um número de telefone. Porém, esse tipo de input ainda é pouco aceito pelos navegadores. Nesse caso, os navegadores que não possuem suporte para o “tel” transformam esse input no type=”text” padrão. Portanto, vejamos o exemplo abaixo para utilizar o “tel” no formulário html:
+
+<form>
+    Telefone: <input type="tel" name="usertel">
+</form>
+
+<input type=”text”>
+Um dos campos mais importantes de um formulário HTML, é provavelmente o mais utilizado e mais aceito por todos navegadores. O input do tipo “text” define um campo de preenchimento de texto de uma linha. Por padrão, este tipo de campo costuma ter o comprimento equivalente a 20 caracteres.
+
+Enfim, vejamos então o exemplo abaixo:
+
+<form>
+    Nome: <input type="text" name="nome"><br>
+    Sobrenome: <input type="text" name="sobrenome"><br>
+    Endereço: <input type="text" name="endereco">
+</form>
+
+<input type=”time”>
+Esse tipo de campo foi lançado junto ao HTML5. O input do tipo “time” define um campo para inserir um horário. Portanto, vejamos o exemplo abaixo:
+
+Escolha o horário: <input type="time" name="usr_horario">
+
+<input type=”url”>
+Esse tipo de campo foi lançado junto ao HTML5. O input do tipo “url” define um campo para inserir uma URL. Desta forma, esse tipo de campo realizará uma validação automática da URL. Portanto, vejamos o exemplo abaixo de um input do tipo URL em um formulário HTML:
+
+<form>
+    Link do seu WebSite: <input type="url" name="webpage">
+</form>
+
+<input type=”week”>
+Esse tipo de campo foi lançado junto ao HTML5. O input do tipo “week” define um campo de controle de semana e ano. Porém, não é levado em consideração o fuso horário.  Com isso, vejamos então o exemplo abaixo:
+
+<form>
+    Selecione uma semana: <input type="week" name="semana">
+</form>
+
+A tag <textarea>
+A tag <textarea> nada mais é do que uma área de texto. Ou seja, define um controle de entrada de texto de várias linhas. Diferente do input do tipo “text”, a tag textarea pode possuir várias linhas. Portanto, as áreas de texto podem conter um número ilimitado de caracteres.
+
+O tamanho de uma área de texto pode ser especificado pelos atributos cols e rows. Porém, o mais aduado na atualidade é utilizar as propriedades do CSS.
+
+Diferentemente da tag <input>, a área de texto possui uma tag de abertura <textarea> e uma de fechamento </textarea>. Caso você queria deixar um texto pré-digitado nessa área, basta digitar esse texto dentro dessas tags.
+
+Portanto, vejamos abaixo um exemplo de formulário HTML utilizando duas áreas de texto:
+
+<form>
+    <textarea></textarea>
+
+    <textarea>Area de texto com um texto inicial dentro</textarea>
+</form>
+
+https://www.w3schools.com
