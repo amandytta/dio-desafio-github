@@ -57,6 +57,20 @@ Vejamos então, algumas observações a respeito do método POST:
 
 > Os envios de formulários com o POST não podem ser marcados.
 
+- Outros atributos:
+
+. onsubmit
+Válida o formulário antes de enviar para o servidor; 
+
+. name=""
+Nomeia nosso formulário para uso backend;
+
+. target=""
+Escolhe o modo como o navegador irá abrir a próxima página do nosso site;
+
+. autocomplete=""
+Define se as informações passadas pelo usuário ficarão salvas no site, por razões de segurança coloque seu valor como off;
+
 - Elementos de formulário HTML
 Os formulários HTML são compostos por diversos elementos, que compõem o formulário. Dessa forma, é necessário entender como e quando utilizar cada um deles. Os elementos de formulários utilizados no HTML são:
 

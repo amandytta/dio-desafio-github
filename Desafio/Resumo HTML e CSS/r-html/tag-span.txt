@@ -1,0 +1,65 @@
+- O que é a tag span?
+A tag span HTML é uma tag adicionada ao HTML em sua 4ª versão cuja finalidade é agrupar e/ou delimitar elementos a nível de linha.
+
+Ao contrário da tag div, que possui a mesma função a nível de bloco, a tag span não possui semântica definida e permite que determinadas palavras em um texto possam ser destacadas ou exibir uma formatação diferente do restante do conteúdo. 
+
+- Para que serve a tag span?
+Na prática, a tag span serve para que você seja capaz de representar elementos visuais destacados de um todo e não representa nada por natureza.
+
+Por não ter semântica própria, é possível representar diversos tipos de formatações através desta tag, inclusive formatações CSS.
+
+-Quais são os atributos da tag span?
+A tag span possui atributos que contribuem para uma melhor legibilidade do código de uma página. Esses atributos também conferem mais definição a um conteúdo e dividem-se em dois: os atributos globais e os atributos de eventos.
+
+Detalharemos cada um destes atributos a seguir: 
+
+- Atributos globais
+Os atributos globais são aqueles que todas as tags existentes em HTML compartilham entre si, inclusive a tag span. São eles e suas funções:
+
+	lang: define a linguagem de um elemento;
+	tabindex: indica se um elemento deve ser navegável através do teclado e em que posição;
+	title: apresenta informações relacionadas a um elemento.
+
+São essas as três funções globais principais que os atributos dividem, mas há ainda muitas outras disponíveis.
+
+- Atributos de eventos
+Os atributos de eventos permitem que os desenvolvedores de software mesclem seus códigos HTML com JavaScript, trazendo mais dinamismo a um conteúdo estático e tornando uma página mais interativa.
+
+São eles e suas funções:
+
+	onload: script carregado após o carregamento total da página;
+	onerror: script carregado quando acontece um erro;
+	onresize: script carregado quando uma página é redimensionada.
+
+Assim como os atributos globais, existem outros elementos de eventos disponíveis na programação.
+
+- Qual a diferença entre as tags DIV e SPAN?
+As tags DIV e SPAN são muito similares, com a única diferença que enquanto a tag span serve ao código a nível de linha, a tag div serve ao código a nível de bloco.
+
+Ao agrupar elementos em bloco, a tag div trabalha com um volume maior de informações e formatações. 
+
+A tag span, por outro lado, somente agrupa elementos em linha, trabalhando com um volume menor de formatações.
+
+- Como usar a tag <span> em HTML e CSS
+A tag span, em HTML, é aberta e fechada pela seguinte representação:
+
+<span> </span>
+
+Para utilizá-la, pode-se utilizar também os atributos id ou class. Em uma linha, veremos o exemplo a seguir, em que será destacada as palavras "bolo de chocolate":
+
+<p>
+     Receita de <span class="bolo">bolo de chocolate</span> fofinho para festa infantil.
+</p>
+
+Imagine que, neste exemplo, a classe "bolo" foi criada em CSS definindo que os elementos desta classe seriam exibidos na cor vermelha.
+
+Neste caso, a linha de código acima resultaria na seguinte exibição para o usuário:
+
+Receita de bolo de chocolate fofinho para festa infantil.
+
+Onde não usar a tag HTML span?
+De modo geral, é importante se questionar se, ao pensar em utilizar a tag span, se não há nenhuma outra tag em HTML que possa desempenhar melhor o papel esperado.
+
+Caso haja outra tag específica para a função que se deseja alcançar, o melhor é utilizar a outra tag.
+
+Por não ser uma tag que possui semântica própria, ela não categoriza os conteúdos onde ela é aplicada para o navegador, o que pode representar um problema caso esse conteúdo precise ser categorizado.

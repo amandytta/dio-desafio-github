@@ -1,0 +1,149 @@
+- Para que serve uma div no HTML
+O elemento div define uma divisão ou seção em um documento HTML. O elemento div é frequentemente usado como um contêiner para outros elementos, o que facilita na estilização de blocos. Também é muito útil para inclusão de interações com Scripts (JavaScript). Portanto, ele é definido com um contêiner genérico para conteúdo de fluxo.
+
+Diante disso, a div é muito utilizada quando precisamos agrupar elementos sem a necessidade do uso de um elemento semântico do HTML5. Isso acontece pois o elemento div não possui um valor semântico. Portanto, não representa nada para o navegador e para os mecanismos de buscas.
+
+Como é muito utilizado para agrupar elementos, acaba sendo um facilitador para organizar informações dentro de um layout. Dessa forma, é possível formatar e manipular os elementos, inclusive a própria div, através do CSS de uma forma organizada. Geralmente é acompanha de atributos de ID e classe, para poder facilitar essa organização e formatação.
+
+- Como utilizar a tag <div>
+Agora que já conhecemos a definição do elemento de divisão do HTML, vamos aprender como utilizá-la.
+
+A sintaxe do elemento div é através da tag de abertura <div> e de fechamento </div>. Por padrão, a div gera uma line-break (quebra de linha) automática ao ser utilizada. Isso ocorre pois possui como display padrão um elemento de bloco, ou seja display block. Portanto, para utilizar a div, basta colocar os elementos que quiser dentro da tag <div></div> como na sintaxe abaixo:
+
+<div>
+    ...
+</div>
+
+Dessa forma, vamos utilizar algumas divisões para poder separar os parágrafos no nosso exemplo abaixo:
+
+<div>
+    <p>Divisão 01</p>
+</div>
+<div>
+    <p>Divisão 02</p>
+</div>
+<div>
+    <p>Divisão 03</p>
+</div>
+
+Claro que podemos incluir qualquer outros elementos HTML, ou seja, outras tags, dentro de uma div.
+
+- Atributos da div
+O Elemento HTML Div costuma ter entre seus principais atributos:
+
+	id – Define uma ID;
+	class – Define uma classe;
+	title – Define um título;
+	height – Define uma altura;
+	width – Define uma largura.
+
+Porém, com exceção do ID, da class e do title, todos os demais atributos já são considerados depreciados. Portanto, dessa forma, podemos definir a altura, a largura e a cor de fundo através do próprio estilo CSS, assim como diversas outras características.
+
+Div também suporta receber todos os atributos globais, assim como também os atributos eventuais.
+
+- Alterando a cor de fundo/background da div
+Para poder alterar a cor de fundo de uma div, devemos estilizar através do CSS. Para poder modificar a cor de fundo, basta utilizar a propriedade background ou background-color do CSS. Podemos utilizar o estilo inline, através do atributo style=”…”, através do CSS dentro das tags <style> ou ainda através de um folha de estilo externa.
+
+Para utilizar a propriedade do background ou background-color, basta declarar um valor da cor. Para isso, pode ser utilizado um código hexadecimal de cores, o nome da cor, ou ainda declarar as cores através do código rgb, rgba ou hsl. Portando, vejamos então abaixo as diversas formas de declarar uma cor de fundo:
+
+<div style="background-color: red"></div>   
+
+<div style="background-color: #FF0000"></div>
+
+<div style="background-color: rgb(255,0,0);"></div>
+
+<div style="background: red"></div>
+
+<div style="background: #FF0000"></div>
+
+<div style="background: rgb(255,0,0);"></div>
+
+Independente de qual dos códigos acima for utilizado, o resultado será o mesmo, uma div contendo um fundo na cor vermelha.
+
+Vejamos então outro exemplo, agora utilizando a tag <style> para declarar o CSS. Vamos estilizar todas as divs com uma altura de 50px e largura de 100px. Posteriormente, iremos definir uma cor para cada classe, de maneiras diferentes (nome da cor, código hexadecimal, valor RGB). Por fim, vamos incluir no documento três elementos HTML Div, cada um com uma classe:
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Cores de fundo em HTML Div</title>
+    <style type="text/css">
+        div{
+            width: 100px;
+            height: 50px;
+        }
+        .azul{
+            background-color: blue;
+        }
+        .vermelho{
+            background: #FF0000;
+        }
+        .verde{
+            background: rgb(0,255,0);
+        }
+    </style>
+</head>
+<body>
+    <div class="azul"></div>   
+
+    <div class="vermelho"></div>
+
+    <div class="verde"></div>
+</body>
+</html>
+
+- ID e classe
+Conforme explicado anteriormente, o HTML Div comporta receber os atributos ID e Class. Ou seja, é possível atribuir à uma div um ID único ou uma ou mais classes. Isso nos permite formatar um ou mais elementos de forma mais especifica e facilitada.
+
+Um ID é uma configuração única, ou seja, só podemos utilizar um ID em apenas um único elemento. Já uma classe é uma configuração que pode ser utilizada em mais de um elemento. Portanto, vejamos o exemplo abaixo:
+
+<div id="cabecalho">
+    <h2>Meu documento sobre Div HTML</h2>
+</div>
+<div id="corpo">
+    <div class="sessao_conteudo">
+        <h3>Meu conteúdo 01</h3>
+        <p>Meu paragrafo contendo texto</p>
+        <p>Meu paragrafo contendo texto</p>
+    </div>
+    <div class="sessao_conteudo">
+        <h3>Meu conteúdo 02</h3>
+        <p>Meu paragrafo contendo texto</p>
+        <p>Meu paragrafo contendo texto</p>
+    </div>    
+</div>
+<div id="rodape">
+    <p>Todos os direitos reservados</p>
+</div>
+
+Observe que nosso documento HTML foi dividido com três divs pais, cada uma contendo um ID única (cabecalho, corpo e rodape). Dentro da nossa div com a id corpo, recebemos duas divisões para o conteúdo. Observe que essas divisões receberam uma mesma classe: sessao_conteudo. Portanto, podemos estilizar as divs através de suas ids, e ainda podemos estilizar todas as divs que contêm a mesma classe de uma só vez. Para IDs, referenciamos no CSS através do “#”, por exemplo: #cabecalho. Já para classes, reconhecemos através de um “.”, ou seja, conforme este exemplo: “.sessao_conteudo“.
+
+Vejamos então o seguinte exemplo de estilo CSS para o documento apresentado no exemplo anterior:
+
+<style>
+    #cabecalho{
+        background-color: #cccccc;
+        width: 600px;
+        padding: 40px 2%;
+        color: white;
+        text-align: center;
+    }
+    #corpo{
+        background-color: red;
+        width: 600px;
+        padding: 10px 2%;
+    }
+    #rodape{
+        width: 600px;
+        padding: 10px 2%;
+        background-color: #888888;
+        color: white;
+        text-align: center;
+    }
+
+    .sessao_conteudo{
+        text-align: center;
+        width: 100%;
+        background-color: green;
+    }
+</style>

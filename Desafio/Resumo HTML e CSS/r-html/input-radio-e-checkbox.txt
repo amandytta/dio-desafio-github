@@ -1,0 +1,114 @@
+> Campos de Seleção: Radio Button e Checkbox
+- São os Radio Buttons e Checkbox:
+
+Checkbox:
+✅ Sim
+🔲 Não
+✅ Talvez
+
+Radio Button:
+⚪ Sim
+🔘 Não 
+⚪ Talvez
+⚪ Quem sabe 
+
+- Radio Buttons - Escolhendo uma opção
+Para que serve um Radio Button?
+O primeiro tipo de campo que vamos usar para fazer uma escolha, é o radio button (botão do tipo rádio, ou botão radial), que nada mais é que aquele bolinha onde clicamos e apenas uma das opções podem ser escolhidas.
+
+Essa é a característica principal deste tipo de campo de um formulário: usamos os radio buttons quando queremos escolher apenas UMA opção, dentre as várias listadas.
+Ou seja, devemos fazer uma pergunta ou pedir uma informação cuja a resposta seja única.
+
+Por exemplo, ao pedir o gênero, estamos querendo saber se a pessoa é homem OU mulher.
+Ao perguntar se um cliente tem plano de saúde ou não, a resposta só pode ser SIM ou NÃO.
+A faixa de salário pode ser até mil, entre mil e dois mil reais, entre três e quatro mil, ou mais de quatro mil. Ou seja, só uma opção pode ser marcada.
+
+- Como usar o Radio Button: type="radio"
+Para usar este tipo de campo de um formulário, temos que fornecer o valor "radio" ao atributo type da tag <input>. Também devemos fornecer o atributo nome, de tal modo que todas as opções, todo o grupo de botões rádio, devem ter o mesmo o nome.
+O que irá mudar entre uma opção e outra é o atributo value.
+
+Assim, a sintaxe para usar os botões radiais é:
+<input type="radio" name="nome_do_grupo" value="valor"/> Valor
+
+E o resultado é o radio button:
+○ Valor
+
+Vamos criar um grupo de botões rádio com as opções "Sim", "Não", "Talvez" e "Quem Sabe", que respondem a pergunta: "Você deseja trabalhar como Webmaster?"
+O código é:
+<input type="radio" name="webmaster" value="sim"/> Sim <br />
+<input type="radio" name="webmaster" value="nao"/> Não <br />
+<input type="radio" name="webmaster" value="talvez"/> Talvez <br />
+<input type="radio" name="webmaster" value="quem_sabe"/> Quem sabe
+
+E o resultado, são os belos radio buttons a seguir:
+Você deseja trabalhar como Webmaster?
+🔘 Sim
+⚪ Não
+⚪ Talvez
+⚪ Quem sabe
+
+Aqui frisamos a importância de terem o mesmo nome.
+Se você selecionar 'sim', por exemplo e enviar seu formulário, o programador que fez o sistema vai receber o valor 'sim' e sabe que essa resposta foi dada ao grupo de botões de nome "webmaster".
+
+Então, se tiver escolhido sim, vai abrir um site pra você fazer um curso.
+Se tiver escolhido não, o sistema (em PHP, por exemplo) vai te mostrar mais vantagens em ser um Webmaster, etc.
+
+O importante é notar que o valor é enviado para o site. Então o site sabe sua resposta (value) de um grupo de botões (name) específico.
+
+- Como enviar o radio button para o servidor? 
+Utilizando o método POST, as opções marcadas no formulário não serão passadas através da url do mesmo.
+
+Utilizando o método GET, serão passadas na url do seu formulário HTML todas as opções marcadas no checkbox do seu formulário.
+
+exemplo:
+127.0.0.1:5500/index.html?webmaster=sim
+
+- Checkbox - Fazendo escolhas
+Para que serve uma checkbox?
+São campos de um formulário que permitem que você escolha mais de uma opção, todas ou até nenhuma.
+
+- Como usar uma checkbox: type="checkbox"
+Aqui não tem muito segredo, para criar uma caixa de checagem de opções, fazemos exatamente a mesma coisa do radio buttons, a diferença é que no atributo type da tag input, nós fornecemos o valor "checkbox".
+
+Por exemplo, o código de um formulário que pergunta o que você deseja aprender seria:
+
+<input type="checkbox" name="opcoes" value="html"/> HTML<br />
+<input type="checkbox" name="opcoes" value="css"/> CSS<br />
+<input type="checkbox" name="opcoes" value="javascript"/> JavaScript<br />
+<input type="checkbox" name="opcoes" value="php"/> PHP
+
+E o belo resultado será:
+
+O que você deseja aprender ?
+✅ HTML
+✅ CSS
+🔲 JavaScript
+🔲 PHP
+
+Resumindo:
+Para escolher somente uma opção de uma lista de opções, use o Radio Button.
+Para escolher quantas opções quiser de uma lista, use o Checkbox.
+
+- Como enviar o checkbox para o servidor?
+Utilizando o método POST, as opções marcadas no formulário não serão passadas através da url do mesmo.
+
+Utilizando o método GET, serão passadas na url do seu formulário HTML todas as opções marcadas no checkbox do seu formulário.
+
+exemplo:
+127.0.0.1:5500/index.html?opcoes=HTML&opcoes=CSS
+
+Sendo assim, o servidor vai entender que as informações passadas não é uma lista de opções que o usuário deseja. Logo, ele irá assumir que a lista é uma váriavel que teve seu valor modificado diversas vezes e irá apenas coletar os últimos dados de sua lista.
+
+Porém, existe uma forma de fazer o servidor entender que as informações passadas são uma lista. 
+
+Você precisará passar através do código html, no atributo name="", colchetes [] para a linguagem backend/servidor entender que aquilo se trata de uma lista de valores. 
+
+exemplo:
+
+<input type="checkbox" name="opcoes[]" value="html"/> HTML<br />
+<input type="checkbox" name="opcoes[]" value="css"/> CSS<br />
+<input type="checkbox" name="opcoes[]" value="javascript"/> JavaScript<br />
+<input type="checkbox" name="opcoes[]" value="php"/> PHP
+
+As informações chegará da seguinte forma:
+$opcoes["HTMl", "CSS"]

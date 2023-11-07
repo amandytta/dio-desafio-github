@@ -1,0 +1,155 @@
+<button>
+A tag <button> é um elemento HTML representado visualmente por um botão clicável. É um elemento muito útil em formulários ou em qualquer parte de uma página web.
+
+- Como utilizar a tag <button>?
+A tag <button> é utilizada para inserir interatividade em uma página ou formulário e tem como função executar uma determinada ação ao receber um clique do usuário.
+
+Por padrão, sua aparência é semelhante a um botão retangular. Entretanto, ela pode ser alterada por meio de estilos CSS ou também substituída por imagem e textos.
+
+<button>: na prática
+<form>
+  <input type='text' placeholder='Digite o seu nome'/>
+  <button type='submit'>Enviar</button>
+</form>
+
+- Sintaxe
+<button>Nome do botão</button>
+
+- Atributos
+
+. autofocus
+Esse atributo especifica que um botão deve obter foco automático quando a página for carregada.
+
+. disable
+Esse atributo especifica que um botão será desabilitado, ou seja, o usuário não poderá interagir com o botão.
+
+. form
+Esse atributo especifica a qual formulário o botão pertence.
+
+. formaction
+Esse atributo especifica para onde enviar os dados do formulário quando este é submetido pelo botão.
+
+. formenctype
+Esse atributo especifica como os dados de um formulário devem ser codificados antes de enviá-los para um servidor. Seus possíveis valores são:
+
+	application/x-www-form-urlencoded: Valor padrão se o atributo não for especificado;
+	multipart/form-data: Este valor é necessário se o usuário fizer upload de um arquivo através do formulário;
+	text/plain: Envia os dados sem qualquer codificação (Não recomendado).
+
+. formmethod
+Esse atributo especifica o método HTTP que o navegador usará para enviar o formulário. Seus possíveis valores são:
+
+	post: Envia os dados obtidos do formulário para o servidor;
+	get: Anexa os dados do formulário a URL.
+
+. formvalidate
+Esse atributo especifica que os dados do formulário não é para ser validado quando submetido.
+
+. formtarget
+Esse atributo é um nome ou palavra-chave indicando onde exibir a resposta que é recebida após o envio do formulário. Seus possíveis valores são:
+
+	_self: Carrega a resposta no mesmo contexto de navegação como atual;
+	_blank: Carrega a resposta em um contexto de navegação sem nome;
+	_parent: Carrega a resposta no contexto de navegação pai do atual;
+	_top: Carrega a resposta para todo o contexto de navegação no nível superior.
+
+. name
+Esse atributo especifica um nome para o botão.
+
+. type
+Esse atributo especifica um tipo para o botão.
+
+	submit: O botão envia os dados do formulário para o servidor;
+	reset: O botão volta os dados do formulário para seus valores iniciais;
+	button: O botão não possui comportamento padrão.
+
+. value
+Esse atributo especifica um valor inicial para o botão.
+
+- Exemplos de uso da tag <button>
+	Exemplo 1:
+No código abaixo demonstrarei uma forma simples de aplicar o botão no código HTML.
+
+<div>
+  <p>Clique no botão abaixo:</p>
+  <button>Clique aqui</button>
+</div>
+
+Note que neste exemplo o botão foi criado sem utilizar nenhum atributo. Neste código o botão não realizará nenhuma ação ao ser clicado.
+
+	Exemplo 2
+Neste exemplo, no código abaixo demonstrarei como aplicar um botão em um formulário.
+
+<form>
+  <input type='text' placeholder='Digite o seu nome'/>
+  <button type='button'>Enviar</button>
+</form>
+
+Note que neste exemplo o botão foi criado com o atributo type que recebeu o valor ‘button’. Com isso, ao clicar no botão, ele não irá submeter o que for escrito no <input>.
+
+	Exemplo 3
+Nos códigos abaixo demonstrarei um botão que submeterá um formulário.
+
+html: 
+
+<form id="formulario">
+  <button type="submit">Botão com type submit</button>
+</form>
+
+------------------------------------------------------------
+javascript:
+
+document.querySelector('#formulario').addEventListener('submit', function (e) {
+      e.preventDefault();
+      document.body.append('Formulário submetido')
+})
+
+Note que neste exemplo foi preciso escrever código JavaScript para apresentar o resultado do clique no botão.
+
+	Exemplo 4
+Nos códigos abaixo demonstrarei um botão aplicado com estilo CSS e que possui a capacidade de alterar esse estilo ao ser clicado.
+
+html:
+
+<div>
+  <h1>Clique no botão abaixo e altere o seu estilo:</h1>
+  <button id="novaCor" onClick="cliqueBtn()">Clique aqui</button>
+</div>
+
+------------------------------------------------------------
+
+css:
+
+button {
+  font-size: 18px;
+  font-weight: 600;
+  background-color: aqua;
+  border-radius: 12px;
+  border: 0;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+--------------------------------------------------------------
+
+javascript:
+
+function cliqueBtn() {
+  document.getElementById("novaCor").style.background = "red";
+  document.getElementById("novaCor").style.color = "white"
+}
+
+Note que neste exemplo utilizamos um id e a propriedade onClick no botão. O id será utilizado dentro de uma função JavaScript e o onClick será utilizado para acionar a função JavaScript quando o botão for clicado.
+
+Com o JavaScript conseguimos criar uma função que dá a capacidade de alterar o estilo do botão quando este for clicado e com o código CSS, conseguimos alterar de diversas formas o visual de um botão.
+
+Compatibilidade com navegadores
+O <button> é suportado em todos os navegadores apresentados na tabela abaixo:
+
+<button>
+Chrome			Sim	
+Mozilla Firefox		Sim
+Edge/IE			Sim
+Opera			Sim
+Safari			Sim
+		    				
