@@ -1,0 +1,30 @@
+- O Que é um iFrame
+Um iFrame é um código em HTML que permite que um elemento seja exibido dentro de outro elemento. Somente possível em páginas HTML,  permite incorporar documentos, vídeos e mídia interativa em uma página.
+
+Ao fazer isso, você pode exibir uma página secundária da web na sua página principal.
+
+O elemento desse tipo permite incluir um conteúdo de outras origens. Ele pode integrar o conteúdo em qualquer lugar da sua página, sem precisar incluí-los na estrutura do layout do seu site, como se fosse um elemento tradicional.
+
+Mas nem por isso você pode usar o iFrame de forma excessiva. Isso pode diminuir a velocidade da sua página e colocar sua segurança em risco, especialmente se você incorporar conteúdos de alguns site suspeito.
+
+Imagine-o como parte do seu conteúdo, mas não parte do seu site. Por exemplo, se você quer adicionar um vídeo do YouTube em um post para estimular os seus leitores, então você pode inserir um elemento do tipo nele.
+
+- Como Usar o iFrame
+Até aqui você sabe que o iFrame é um elemento adicional para compartilhar conteúdo de outros sites. Você pode adicioná-lo como forma de contextualizar um determinado tópico para os leitores. Dá para inserir o elemento usando a tag <iframe> em um documento HTML.
+
+<iframe src="" width="680" height="480" allowfullscreen></iframe>
+
+- Vamos examinar cada tag separadamente:
+
+A tag <iframe>…</iframe> é usada para que seja inserido o vídeo dentro do conteúdo.
+
+	O iFrame source (src) é a origem do conteúdo, seja do servidor interno o externo. Não se esqueça de incorporar o código na url.
+	Width (largura) e height (altura) são os aspectos visuais. Você pode inserir uma medida fixa como 680×480 pixels (px) no exemplo. Ou, você pode usar o método de porcentagem (10%-100%) na qual o conteúdo será ajustado automaticamente.
+
+- Ameaças e Segurança
+Por natureza, o elemento iFrame não representa nenhum risco de segurança para sua página ou para seus leitores. O código foi desenvolvido para ajudar os criadores de conteúdo a adicionar um material que fosse visualmente atraente aos leitores, como os vídeos. No entanto, você precisa prestar mais atenção quando for adicionar um conteúdo vindo de um site do site pouco confiável.
+
+Houve um surto de uso de código iFrame em alguns sites populares, como o ABC News, em 2008. Esse tipo de ataque redireciona os visitantes para um site malicioso, que instala um vírus no computador do visitante ou tenta roubar informações confidenciais. É por isso que não é recomendado incluir o iFrame como parte integrante do seu site.
+
+Se você tem dúvidas sobre a segurança de um site, não perca seu tempo linkando este site no seu conteúdo com o iFrame.
+

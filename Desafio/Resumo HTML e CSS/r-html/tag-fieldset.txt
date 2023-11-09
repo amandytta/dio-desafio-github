@@ -1,0 +1,27 @@
+<fieldset>
+O elemento HTML <fieldset> é usado para agrupar elementos, assim como labels (<label>), dentro de um formulário web.
+
+- Atributos
+Este elemento inclui os atributos globais:
+
+disabled
+Se este atributo Booleano está definido, os controles de formulario que são seus descendentes, exceto os descendentes de seu primeiro elemento opcional <legend>, estarão desativados, i.e., não editável. Eles não receberão qualquer evento de navegação, como clique do mouse ou relacionado com focus. Frequentemente os navegadores mostram tais controles em cinza;
+
+form
+Este atributo tem o valor do atributo id do elemento <form> (en-US) com que se relaciona. Seu valor padrão é o id do elemento <form> (en-US) mais próximo;
+
+name
+O nome associado com o grupo.
+
+O label para o fieldset é dado pelo primeiro elemento <legend> que é um filho do fieldset.
+
+- Exemplos
+Example #1: Formulário com fieldset, legend, e label
+HTML
+
+<form action="test.php" method="post">
+  <fieldset>
+    <legend>Title</legend>
+    <input type="radio" id="radio" /> <label for="radio">Click me</label>
+  </fieldset>
+</form>
